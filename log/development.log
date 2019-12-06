@@ -317,3 +317,128 @@ Completed 500 Internal Server Error in 299ms (ActiveRecord: 8.4ms | Allocations:
 NoMethodError (undefined method `issue_token' for #<Api::V1::UsersController:0x00007fab312731c8>):
   
 app/controllers/api/v1/users_controller.rb:5:in `create'
+Started GET "/" for ::1 at 2019-12-06 15:15:33 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Polly/.rvm/gems/ruby-2.6.3/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Polly/.rvm/gems/ruby-2.6.3/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 316)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 1604)
+
+
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:15:36 +0000
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$hfmde/ddziTLvQQEGvC1aeIq.uqeaBNv79CeoNaRiFywVRijCbf.K"], ["created_at", "2019-12-06 15:15:36.731493"], ["updated_at", "2019-12-06 15:15:36.731493"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 10.4ms | Allocations: 7348)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/application_controller.rb:5:in `issue_token'
+app/controllers/api/v1/users_controller.rb:5:in `create'
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:18:07 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$mApkRneP/lhpqvWilX5CgOoPa8.IsxHJKQnfuTGIQ6BVnPYAGyJES"], ["created_at", "2019-12-06 15:18:08.173783"], ["updated_at", "2019-12-06 15:18:08.173783"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (11.54ms)
+Completed 200 OK in 271ms (Views: 14.5ms | ActiveRecord: 10.5ms | Allocations: 10366)
+
+
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:30:01 +0000
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$OZZ9kFqaRH.RIDkoVwNbmuzqfK07V4uqj0vDxqP3BgQgclTw45FyS"], ["created_at", "2019-12-06 15:30:01.987883"], ["updated_at", "2019-12-06 15:30:01.987883"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 2.9ms | Allocations: 42526)
+
+
+  
+NoMethodError (undefined method `issue_token' for #<Api::V1::UsersController:0x00007fcd5aab93a0>):
+  
+app/controllers/api/v1/users_controller.rb:5:in `create'
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:30:43 +0000
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$D0f5mCcyy8Uai8AodFFXgeQEP1WfdVGcuFkvlkX4i79nnAK5Fe54q"], ["created_at", "2019-12-06 15:30:43.623393"], ["updated_at", "2019-12-06 15:30:43.623393"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 378ms (ActiveRecord: 11.7ms | Allocations: 77723)
+
+
+  
+NameError (undefined local variable or method `cookies' for #<Api::V1::UsersController:0x00007fcd5d1ed548>):
+  
+app/controllers/api/v1/users_controller.rb:6:in `create'
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:37:58 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$yy1diUWkis1nSNrvI4qBzeOUFOzxj.XdYzS6rO.pEeyCYuf4qMw7m"], ["created_at", "2019-12-06 15:37:58.364786"], ["updated_at", "2019-12-06 15:37:58.364786"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 458ms (ActiveRecord: 10.4ms | Allocations: 78321)
+
+
+  
+NameError (undefined local variable or method `cookies' for #<Api::V1::UsersController:0x00007fc9e83c0e10>):
+  
+app/controllers/api/v1/users_controller.rb:6:in `create'
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:55:42 +0000
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$d7DkIT0QhFEcDwh3KUiD0uhT0Cn6lg6IFlw4zRV1h.Xoy6G2f8vAK"], ["created_at", "2019-12-06 15:55:42.626979"], ["updated_at", "2019-12-06 15:55:42.626979"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 378ms (ActiveRecord: 3.2ms | Allocations: 77501)
+
+
+  
+NameError (undefined local variable or method `cookies' for #<Api::V1::UsersController:0x00007fc9ea49e5b0>):
+  
+app/controllers/api/v1/users_controller.rb:6:in `create'
+Started GET "/" for ::1 at 2019-12-06 15:56:21 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Polly/.rvm/gems/ruby-2.6.3/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Polly/.rvm/gems/ruby-2.6.3/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 316)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 1604)
+
+
+Started POST "/api/v1/users" for ::1 at 2019-12-06 15:56:24 +0000
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$0hI4esy9cbY7kRTPPw0YoenUDVbqA617sxDC81lMAzog9HQ7ZfFq2"], ["created_at", "2019-12-06 15:56:24.850308"], ["updated_at", "2019-12-06 15:56:24.850308"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (14.63ms)
+Completed 200 OK in 274ms (Views: 16.6ms | ActiveRecord: 10.1ms | Allocations: 9163)
+
+

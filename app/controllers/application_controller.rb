@@ -1,11 +1,13 @@
 class ApplicationController < ActionController::API
+    include ::ActionController::Cookies
     before_action :set_current_user
 
-    def issue_token(payload)
+    def encode_token(payload)
         JWT.encode(payload, ENV['RAILS_SECRET'])
     end
 
     def decode_token(token)
+    # byebug
         JWT.decode(token, ENV['RAILS_SECRET'])[0]
     end
 
@@ -15,7 +17,7 @@ class ApplicationController < ActionController::API
 
     def set_current_user
         token = get_token
-        if token
+        if token && token != "null"
             decoded_token = decode_token(token)
             @current_user = User.find(decoded_token["user_id"])
         else
