@@ -10,6 +10,12 @@ class Api::V1::UsersController < ApplicationController
             render json: { errors: user.errors.full_messages }, status: :not_acceptable
         end
     end
+
+    def index 
+        users = User.all 
+        render json: users 
+    end
+    
     private
 
     def user_params

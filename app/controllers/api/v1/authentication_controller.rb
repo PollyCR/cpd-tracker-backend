@@ -27,7 +27,6 @@ class Api::V1::AuthController < ApplicationController
     def destroy
 
         cookies.delete(:jwt)
-        @current_user.active_user = false
         @current_user.save
         
     end
